@@ -10,6 +10,7 @@ const NavBar_bones: React.FC = () => {
       height: 50px;
       position: fixed;
       top: 0;
+      z-index: 999;
     `
     const NavNavBar = styled.nav`
       width: ${propsList['width1410']};
