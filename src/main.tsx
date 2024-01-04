@@ -4,6 +4,7 @@ import App from './App.tsx'
 import {BrowserRouter} from "react-router-dom";
 import {createGlobalStyle} from "styled-components";
 import './App.css'
+import {QueryClient, QueryClientProvider} from "react-query";
 
 const Global = createGlobalStyle`
   * {
@@ -76,11 +77,22 @@ const Global = createGlobalStyle`
     background-color: rgb(199, 143, 167);
   }
 `
+
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            refetchOnWindowFocus: false,
+        }
+    }
+})
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-      <Global/>
-      <BrowserRouter>
-          <App />
-      </BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+          <Global/>
+          <BrowserRouter>
+              <App />
+          </BrowserRouter>
+      </QueryClientProvider>
   </React.StrictMode>,
 )
