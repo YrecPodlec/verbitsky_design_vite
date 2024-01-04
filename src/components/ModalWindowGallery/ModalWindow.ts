@@ -1,11 +1,20 @@
 import styled from "styled-components";
 import {propsList} from "src/styles/consts.ts";
-export const ModalGallery_bones = styled.div<{display: string}>`
+export const BigModalFirstBlock_bones = styled.div<{display: string}>`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  top: 0;
+  display: ${props => props.display};
+`
+export const ModalGallery_bones = styled.div`
       position: fixed;
-      display: ${props => props.display};
+      display: flex;
       flex-direction: column;
       width: 96vw;
-      min-height: 80vh;
+      height: 90vh;
       background-color: ${propsList['backgroundModal']};
       z-index: 999;
       top: calc(50% - 42vh);
@@ -40,5 +49,19 @@ export const ModalDescriptionProject_bones = styled.div`
   }
 `
 export const ModalImagesGalleryList_bones = styled.div`
-    
+  overflow-y: auto;
+  max-width: 96vw;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  justify-content: space-between;
+`
+export const DivImageGallery_bones = styled.div<{url: string}>`
+  background-image: url(${props => props.url});
+  width: 15vw;
+  height: 25vh;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 4vh;
 `

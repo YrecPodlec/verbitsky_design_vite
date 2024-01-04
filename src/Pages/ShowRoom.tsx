@@ -3,8 +3,9 @@ import {SectionBlock} from "src/styles";
 import styled from "styled-components";
 import {propsList} from "src/styles/consts.ts";
 import {
+    BigModalFirstBlock,
     BottonRowDown,
-    CloseBtn,
+    CloseBtn, DivImageGallery,
     Gallery_blocks,
     ModalDescriptionProject,
     ModalGallery,
@@ -82,7 +83,7 @@ const ShowRoom_bones: React.FC = () => {
         }
     )
 
-    const [selectedItem, setSelectedItem] = useState({});
+    const [selectedItem, setSelectedItem] = useState<any>({});
     const handleItemClick = (data: any) => {
         setSelectedItem(data);
         setDisplayModal('flex')
@@ -92,8 +93,6 @@ const ShowRoom_bones: React.FC = () => {
     const handleCloseModal = () => {
         setDisplayModal('none')
     }
-
-
     return (
         <main>
             <SectionBlock>
@@ -143,35 +142,43 @@ const ShowRoom_bones: React.FC = () => {
             </Gallery_blocks>
 
             {/*МОДАЛЬНОЕ ОКНО*/}
-            <ModalGallery display={displayModal}>
-                <CloseBtn>
-                    <div onClick={handleCloseModal}>&#10006;</div>
-                </CloseBtn>
-                <h1>
-                    {selectedItem.title}
-                </h1>
-                <ModalDescriptionProject>
-                    <div style={{width: "80%"}}>
-                        <h1>Описание проекта:</h1>
-                        <div>
-                            {selectedItem.description}
+            <BigModalFirstBlock display={displayModal}>
+                <ModalGallery >
+                    <CloseBtn>
+                        <div onClick={handleCloseModal}>&#10006;</div>
+                    </CloseBtn>
+                    <h1 onClick={() => console.log(selectedItem.images)}>
+                        {selectedItem.title}
+                    </h1>
+                    <ModalDescriptionProject>
+                        <div style={{width: "80%"}}>
+                            <h1>Описание проекта:</h1>
+                            <div>
+                                {selectedItem.description}
+                            </div>
                         </div>
-                    </div>
-                    <div style={{width: "20%"}}>
-                        <div style={{display: "flex", justifyContent: "space-between"}}>
-                            <h4>Квадратные метры:</h4>
-                            <div>{selectedItem.size}</div>
+                        <div style={{width: "20%"}}>
+                            <div style={{display: "flex", justifyContent: "space-between"}}>
+                                <h4>Квадратные метры:</h4>
+                                <div>{selectedItem.size}</div>
+                            </div>
+                            <div style={{display: "flex", justifyContent: "space-between"}}>
+                                <h4>Сроки и сдача:</h4>
+                                <div>{selectedItem.deadline}</div>
+                            </div>
                         </div>
-                        <div style={{display: "flex", justifyContent: "space-between"}}>
-                            <h4>Сроки и сдача:</h4>
-                            <div>{selectedItem.deadline}</div>
-                        </div>
-                    </div>
-                </ModalDescriptionProject>
-                <ModalImagesGalleryList>
+                    </ModalDescriptionProject>
+                    <ModalImagesGalleryList>
+                        {
+                            Array.isArray(selectedItem.images) &&
+                            selectedItem.images.map((item: string, index: string) => (
+                                <DivImageGallery key={index}  url={item}/>
+                            ))
+                        }
 
-                </ModalImagesGalleryList>
-            </ModalGallery>
+                    </ModalImagesGalleryList>
+                </ModalGallery>
+            </BigModalFirstBlock>
         </main>
     );
 };
