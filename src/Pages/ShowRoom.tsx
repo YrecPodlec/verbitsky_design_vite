@@ -74,6 +74,7 @@ const BlockRowBottonMain = styled.div`
     
 `
 const ShowRoom_bones: React.FC = () => {
+    // const [page, setPage] = useState(0)
     // GET DATA
     const {isLoading, data} = useQuery(
         ['projects'],
@@ -172,10 +173,11 @@ const ShowRoom_bones: React.FC = () => {
                         {
                             Array.isArray(selectedItem.images) &&
                             selectedItem.images.map((item: string, index: string) => (
-                                <DivImageGallery key={index}  url={item}/>
+                                <DivImageGallery key={index}>
+                                    <img src={item} alt=""/>
+                                </DivImageGallery>
                             ))
                         }
-
                     </ModalImagesGalleryList>
                 </ModalGallery>
             </BigModalFirstBlock>
