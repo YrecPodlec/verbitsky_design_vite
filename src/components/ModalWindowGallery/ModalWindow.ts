@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {propsList} from "src/styles/consts.ts";
 export const BigModalFirstBlock_bones = styled.div<{display: string}>`
   width: 100%;
   height: 100%;
@@ -10,18 +9,19 @@ export const BigModalFirstBlock_bones = styled.div<{display: string}>`
   display: ${props => props.display};
 `
 export const ModalGallery_bones = styled.div`
-      position: fixed;
-      display: flex;
-      flex-direction: column;
-      width: 96vw;
-      height: 90vh;
-      background-color: ${propsList['backgroundModal']};
-      z-index: 999;
-      top: calc(50% - 42vh);
-      left: calc(50% - 48vw);
-      padding: 16px;
-      border-radius: 32px;
-  & > h1{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 96vw;
+  height: 90vh;
+  background-color: #01010c;
+  z-index: 999;
+  top: calc(50% - 42vh);
+  left: calc(50% - 48vw);
+  padding: 16px;
+  border-radius: 32px;
+
+  & > h1 {
     font-size: 24px;
     text-align: center;
     padding-bottom: 24px;
@@ -49,19 +49,17 @@ export const ModalDescriptionProject_bones = styled.div`
   }
 `
 export const ModalImagesGalleryList_bones = styled.div`
-  overflow-y: auto;
   max-width: 96vw;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow-x: hidden;
-  justify-content: space-between;
+  box-sizing: border-box;
+  columns: 4;
+  overflow-y: scroll;
+  padding: 16px;
 `
-export const DivImageGallery_bones = styled.div<{url: string}>`
-  background-image: url(${props => props.url});
-  width: 15vw;
-  height: 25vh;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 4vh;
+export const DivImageGallery_bones = styled.div`
+  width: 100%;
+  margin-bottom: 16px;
+  img{
+    max-width: 100%;
+    border-radius: 25px;
+  }
 `
