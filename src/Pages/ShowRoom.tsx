@@ -74,11 +74,11 @@ const BlockRowBottonMain = styled.div`
     
 `
 const ShowRoom_bones: React.FC = () => {
-    // const [page, setPage] = useState(0)
+    const [page, setPage] = useState(1)
     // GET DATA
     const {isLoading, data} = useQuery(
-        ['projects'],
-        () => ProjectsService.getAll(),
+        ['projects', page],
+        () => ProjectsService.getAll(page),
         {
             select: ({data}) => data,
         }
@@ -153,6 +153,13 @@ const ShowRoom_bones: React.FC = () => {
                     <h1>NO</h1>
                 )}
             </Gallery_blocks>
+
+            {/*Кнопки пагинации*/}
+            <div>
+                <button onClick={() => setPage(page => page - 1)} disabled={page === 1}>Предыдущая</button>
+                <h1>{page}</h1>
+                <button onClick={() => setPage(page => page + 1)} disabled={page === 9}>следующая</button>
+            </div>
 
             {/*МОДАЛЬНОЕ ОКНО*/}
             <BigModalFirstBlock display={displayModal}>

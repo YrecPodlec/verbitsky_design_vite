@@ -71,7 +71,7 @@ export const ImageModalWindow_bones = styled.div<{display: string}>`
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.95);
   z-index: 999;
   top: 0;
   display: ${props => props.display};
