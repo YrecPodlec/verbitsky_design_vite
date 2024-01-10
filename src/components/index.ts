@@ -5,7 +5,7 @@ import BottonRowDown_bones from "src/components/buttons/BottonRowDown/BottonRowD
 import {Gallery_blocks_bones, Gallery_item_bones} from "src/components/Gallery/gallery_blocks.ts";
 import {
     BigModalFirstBlock_bones,
-    CloseBtn_bones, DivImageGallery_bones,
+    CloseBtn_bones, DivImageGallery_bones, ImageModalWindow_bones,
     ModalDescriptionProject_bones,
     ModalGallery_bones, ModalImagesGalleryList_bones
 } from "src/components/ModalWindowGallery/ModalWindow.ts";
@@ -24,3 +24,5 @@ export {CloseBtn_bones as CloseBtn}
 export {ModalImagesGalleryList_bones as ModalImagesGalleryList}
 export {BigModalFirstBlock_bones as BigModalFirstBlock}
 export {DivImageGallery_bones as DivImageGallery}
+
+export {ImageModalWindow_bones as ImageModalWindow}

@@ -6,7 +6,7 @@ import {
     BigModalFirstBlock,
     BottonRowDown,
     CloseBtn, DivImageGallery,
-    Gallery_blocks,
+    Gallery_blocks, ImageModalWindow,
     ModalDescriptionProject,
     ModalGallery,
     ModalImagesGalleryList
@@ -94,6 +94,18 @@ const ShowRoom_bones: React.FC = () => {
     const handleCloseModal = () => {
         setDisplayModal('none')
     }
+
+
+    // КАРТИНКА
+    const [selectedImage, setSelectedImage] = useState('empty')
+    const [displayModal_image, setDisplayModal_image] = useState('none')
+    const setSelectedImage_func = (item: string) => {
+        setSelectedImage(item);
+        setDisplayModal_image('flex')
+    }
+    const handleCloseModal_image = () => {
+        setDisplayModal_image('none')
+    }
     return (
         <main>
             <SectionBlock>
@@ -148,7 +160,7 @@ const ShowRoom_bones: React.FC = () => {
                     <CloseBtn>
                         <div onClick={handleCloseModal}>&#10006;</div>
                     </CloseBtn>
-                    <h1 onClick={() => console.log(selectedItem.images)}>
+                    <h1>
                         {selectedItem.title}
                     </h1>
                     <ModalDescriptionProject>
@@ -174,13 +186,22 @@ const ShowRoom_bones: React.FC = () => {
                             Array.isArray(selectedItem.images) &&
                             selectedItem.images.map((item: string, index: string) => (
                                 <DivImageGallery key={index}>
-                                    <img src={item} alt=""/>
+                                    <img src={item}
+                                         alt=""
+                                         onClick={ () => setSelectedImage_func(item)}/>
                                 </DivImageGallery>
                             ))
                         }
                     </ModalImagesGalleryList>
                 </ModalGallery>
             </BigModalFirstBlock>
+            {/*КАРТИНКА*/}
+            <ImageModalWindow display={displayModal_image}>
+                <CloseBtn>
+                    <div onClick={handleCloseModal_image} style={{fontSize:'16px'}}>Закрыть картинку</div>
+                </CloseBtn>
+                <img src={selectedImage} alt=""/>
+            </ImageModalWindow>
         </main>
     );
 };

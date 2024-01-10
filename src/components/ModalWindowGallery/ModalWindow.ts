@@ -61,5 +61,28 @@ export const DivImageGallery_bones = styled.div`
   img{
     max-width: 100%;
     border-radius: 25px;
+    cursor: pointer;
+    z-index: 999;
+  }
+`
+
+// КАРТИНКА
+export const ImageModalWindow_bones = styled.div<{display: string}>`
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  top: 0;
+  display: ${props => props.display};
+  & > div:nth-child(1){
+    position: absolute;
+    margin: 5vh auto;
+  }
+  & > img{
+    position: relative;
+    margin: 0 auto;
+    padding: 48px;
+    border-radius: 64px;
   }
 `
