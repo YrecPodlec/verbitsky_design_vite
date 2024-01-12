@@ -73,6 +73,28 @@ const BlockRight = styled.div`
 const BlockRowBottonMain = styled.div`
     
 `
+
+const Pagination_parent = styled.div`
+  display: flex;
+  gap: 16px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  font-size: 32px;
+  align-items: center;
+  & > button{
+    background: ${propsList['pinkLight']};
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 32px;
+    height: 100%;
+    padding: 8px;
+    
+  }
+`
+
 const ShowRoom_bones: React.FC = () => {
     const [page, setPage] = useState(1)
     // GET DATA
@@ -95,7 +117,6 @@ const ShowRoom_bones: React.FC = () => {
         setDisplayModal('none')
     }
 
-
     // КАРТИНКА
     const [selectedImage, setSelectedImage] = useState('empty')
     const [displayModal_image, setDisplayModal_image] = useState('none')
@@ -106,6 +127,7 @@ const ShowRoom_bones: React.FC = () => {
     const handleCloseModal_image = () => {
         setDisplayModal_image('none')
     }
+    console.log(data)
     return (
         <main>
             <SectionBlock>
@@ -137,29 +159,28 @@ const ShowRoom_bones: React.FC = () => {
             <Gallery_blocks>
                 {isLoading ? (
                     <div>Loading...</div>
-                ) : data?.length ? (
+                ) : data?.results?.length ? (
                     <div>
-                        {data.map((item) =>
-                            <Gallery_item bg={item.images[1]}>
+                        {data.results.map((item) => (
+                            <Gallery_item bg={item.images[1]} key={item.id}>
                                 <div onClick={() => handleItemClick(item)}>
-                                    <span>
-                                    {item.title}
-                                    </span>
+                                    <span>{item.title}</span>
                                 </div>
                             </Gallery_item>
-                        )}
+                        ))}
                     </div>
                 ) : (
                     <h1>NO</h1>
                 )}
             </Gallery_blocks>
 
+
             {/*Кнопки пагинации*/}
-            <div>
-                <button onClick={() => setPage(page => page - 1)} disabled={page === 1}>Предыдущая</button>
+            <Pagination_parent>
+                <button onClick={() => setPage(page => page - 1)} disabled={page === 1}>&larr;</button>
                 <h1>{page}</h1>
-                <button onClick={() => setPage(page => page + 1)} disabled={page === 9}>следующая</button>
-            </div>
+                <button onClick={() => setPage(page => page + 1)} disabled={page === 9}>&rarr;</button>
+            </Pagination_parent>
 
             {/*МОДАЛЬНОЕ ОКНО*/}
             <BigModalFirstBlock display={displayModal}>
@@ -171,13 +192,13 @@ const ShowRoom_bones: React.FC = () => {
                         {selectedItem.title}
                     </h1>
                     <ModalDescriptionProject>
-                        <div style={{width: "80%"}}>
+                        <div style={{width: "75%"}}>
                             <h1>Описание проекта:</h1>
                             <div>
                                 {selectedItem.description}
                             </div>
                         </div>
-                        <div style={{width: "20%"}}>
+                        <div style={{width: "25%"}}>
                             <div style={{display: "flex", justifyContent: "space-between"}}>
                                 <h4>Квадратные метры:</h4>
                                 <div>{selectedItem.size}</div>

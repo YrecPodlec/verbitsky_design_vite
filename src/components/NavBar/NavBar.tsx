@@ -26,7 +26,7 @@ const NavBar_bones: React.FC = () => {
     const ButtonBlocks = styled.div`
       display: grid;
       gap: calc(${propsList['pixel4']} * 4);
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-template-columns: repeat(1, minmax(0, 1fr));
       justify-content: center;
       align-items: center;
     `
@@ -41,12 +41,12 @@ const NavBar_bones: React.FC = () => {
                     </Link>
                 </div>
                 <ButtonBlocks>
-                    <ButtonNavBar href='/' name='УСЛУГИ' hrefBlock='#price'/>
+                    {/*<ButtonNavBar href='/' name='УСЛУГИ' hrefBlock='#price'/>*/}
                     <ButtonNavBar href='/show-room' name='ШОУ РУМ' hrefBlock=''/>
-                    <ButtonNavBar href='/suppliers' name='ПОСТАВЩИКИ' hrefBlock=''/>
-                    <ButtonNavBar href='/articles' name='СТАТЬИ' hrefBlock=''/>
-                    <ButtonNavBar href='/' name='ОБО МНЕ' hrefBlock='#about-me'/>
-                    <ButtonNavBar href='/contacts' name='КОНТАКТЫ' hrefBlock=''/>
+                    {/*<ButtonNavBar href='/suppliers' name='ПОСТАВЩИКИ' hrefBlock=''/>*/}
+                    {/*<ButtonNavBar href='/articles' name='СТАТЬИ' hrefBlock=''/>*/}
+                    {/*<ButtonNavBar href='/' name='ОБО МНЕ' hrefBlock='#about-me'/>*/}
+                    {/*<ButtonNavBar href='/contacts' name='КОНТАКТЫ' hrefBlock=''/>*/}
                 </ButtonBlocks>
             </NavNavBar>
         </HeaderNavBar>
