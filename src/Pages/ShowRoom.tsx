@@ -140,7 +140,7 @@ const ShowRoom_bones: React.FC = () => {
                 ) : data?.length ? (
                     <div>
                         {data.map((item) =>
-                            <Gallery_item bg={`/public` + item.images[1]}>
+                            <Gallery_item bg={item.images[1]}>
                                 <div onClick={() => handleItemClick(item)}>
                                     <span>
                                     {item.title}
