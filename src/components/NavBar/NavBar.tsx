@@ -36,7 +36,7 @@ const NavBar_bones: React.FC = () => {
                 <div className={'header_logo'}>
                     <Link to='/'>
                         <a href="#main">
-                            <img src="/public/logo_header.webp" alt=""/>
+                            <img src="/logo_header.webp" alt=""/>
                         </a>
                     </Link>
                 </div>
