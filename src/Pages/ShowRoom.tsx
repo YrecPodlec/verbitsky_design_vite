@@ -128,7 +128,9 @@ const ShowRoom_bones: React.FC = () => {
         setDisplayModal_image('none')
     }
     console.log(data)
-    return (
+    // @ts-ignore
+    // @ts-ignore
+    var main = <>
         <main>
             <SectionBlock>
                 <BlockLeft>
@@ -162,7 +164,7 @@ const ShowRoom_bones: React.FC = () => {
                 ) : data?.results?.length ? (
                     <div>
                         {data.results.map((item) => (
-                            <Gallery_item bg={item.images[1]} key={item.id}>
+                            <Gallery_item bg={item.images[1]} key={item._id}>
                                 <div onClick={() => handleItemClick(item)}>
                                     <span>{item.title}</span>
                                 </div>
@@ -175,6 +177,7 @@ const ShowRoom_bones: React.FC = () => {
             </Gallery_blocks>
 
 
+
             {/*Кнопки пагинации*/}
             <Pagination_parent>
                 <button onClick={() => setPage(page => page - 1)} disabled={page === 1}>&larr;</button>
@@ -184,7 +187,7 @@ const ShowRoom_bones: React.FC = () => {
 
             {/*МОДАЛЬНОЕ ОКНО*/}
             <BigModalFirstBlock display={displayModal}>
-                <ModalGallery >
+                <ModalGallery>
                     <CloseBtn>
                         <div onClick={handleCloseModal}>&#10006;</div>
                     </CloseBtn>
@@ -216,7 +219,7 @@ const ShowRoom_bones: React.FC = () => {
                                 <DivImageGallery key={index}>
                                     <img src={item}
                                          alt=""
-                                         onClick={ () => setSelectedImage_func(item)}/>
+                                         onClick={() => setSelectedImage_func(item)}/>
                                 </DivImageGallery>
                             ))
                         }
@@ -226,12 +229,13 @@ const ShowRoom_bones: React.FC = () => {
             {/*КАРТИНКА*/}
             <ImageModalWindow display={displayModal_image}>
                 <CloseBtn>
-                    <div onClick={handleCloseModal_image} style={{fontSize:'16px'}}>Закрыть картинку</div>
+                    <div onClick={handleCloseModal_image} style={{fontSize: '16px'}}>Закрыть картинку</div>
                 </CloseBtn>
                 <img src={selectedImage} alt=""/>
             </ImageModalWindow>
         </main>
-    );
+    </>;
+    return main;
 };
 
 export default ShowRoom_bones;
