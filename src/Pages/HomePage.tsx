@@ -56,7 +56,6 @@ const BlockCenter = styled.div`
 const BackWave = styled.section`
   width: 100%;
   height: 377px;
-  margin-top: -50px;
   background-image: url("/WaveBackground.svg");
   background-size: cover;
 `
@@ -108,7 +107,7 @@ const HomePage_bones: React.FC = () => {
                             <BlockCenter>
                                 <div>ТУТ БУДЕТ ТЕКСТ</div>
                             </BlockCenter>
-                            <div>
+                            <div id={'ScrollBlock'}>
                                 <BottonRowDown/>
                             </div>
                         </BlackBackground>
@@ -142,6 +141,10 @@ const HomePage_bones: React.FC = () => {
                     </div>
                 </BlockWaveText>
             </BackWave>
+
+            <div style={{height:"100vh"}}>
+                sdasd
+            </div>
 
         </main>
     );

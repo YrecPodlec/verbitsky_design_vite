@@ -3,24 +3,28 @@ import styled from "styled-components";
 
 const BottonRowDown_bones:React.FC = () => {
     const BlockDivRow = styled.div`
-      display: flex;
-      width: 100%;
-      height: 100%;
-      justify-content: space-around;
       align-items: center;
-      cursor: pointer;
-      flex-direction: column;
-      h5{
-        cursor: pointer;
-      }
-      img{
-        max-height: 65%;
+      display: flex;
+      justify-content: space-around;
+      a{
+        display: flex;
+        max-width: 100%;
+        max-height: 100%;
+        color: white;
+        text-decoration: none;
+        justify-content: center;
+        flex-direction: column;
+        img{
+          max-height: 60px;
+        }
       }
     `
     return (
         <BlockDivRow>
-            <h5>УЗНАТЬ БОЛЬШЕ</h5>
-            <img src="/row.svg" alt=""/>
+            <a href="#ScrollBlock">
+                УЗНАТЬ БОЛЬШЕ
+                <img src="/row.svg" alt=""/>
+            </a>
         </BlockDivRow>
     );
 };

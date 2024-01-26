@@ -128,9 +128,7 @@ const ShowRoom_bones: React.FC = () => {
         setDisplayModal_image('none')
     }
     console.log(data)
-    // @ts-ignore
-    // @ts-ignore
-    var main = <>
+    return (
         <main>
             <SectionBlock>
                 <BlockLeft>
@@ -139,7 +137,7 @@ const ShowRoom_bones: React.FC = () => {
                         <ImageBlockGallery content={'/images/moscow-resident/2-moscow-resident.webp'}/>
                         <ImageBlockGallery content={'/images/krylaty/1-krylaty.webp'}/>
                     </ImagesRow>
-                    <BlockRowBottonMain>
+                    <BlockRowBottonMain id={'ScrollBlock'}>
                         <BottonRowDown/>
                     </BlockRowBottonMain>
                 </BlockLeft>
@@ -175,7 +173,6 @@ const ShowRoom_bones: React.FC = () => {
                     <h1>NO</h1>
                 )}
             </Gallery_blocks>
-
 
 
             {/*Кнопки пагинации*/}
@@ -234,8 +231,7 @@ const ShowRoom_bones: React.FC = () => {
                 <img src={selectedImage} alt=""/>
             </ImageModalWindow>
         </main>
-    </>;
-    return main;
+    );
 };
 
 export default ShowRoom_bones;
