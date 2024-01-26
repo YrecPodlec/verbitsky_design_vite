@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/show-room", "destination": "/show-room" }]
+}
