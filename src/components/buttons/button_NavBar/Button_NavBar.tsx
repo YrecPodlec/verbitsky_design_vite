@@ -24,22 +24,8 @@ const ButtonNavBar_bones: React.FC<ButtonNavBar> = ({href, name, hrefBlock}) => 
         text-decoration: none;
         color: white;
       }
-      &::before{
-        content: "";
-        position: absolute;
-        background: ${propsList['orange']};
-        height: 230px;
-        width: 230px;
-        border-radius: 50%;
-        margin-top: 5vh;
-        transition: all .5s ease-in-out;
-        z-index: -1;
-      }
       &:hover{
-        &::before{
-          margin-top: -50%;
-          margin-left: -30%;
-        }
+        background-color: rgb(229, 34, 0);
       }
     `
     return (

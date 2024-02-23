@@ -9,11 +9,9 @@ const TextBackground_bones = styled.span`
   color: rgba(0,0,0,0.71);
   z-index: -99;
   h1{
-    font-size: 250px;
+    font-size: 15vw;
     font-weight: normal;
-    &:nth-child(2){
-      margin-left: auto;
-    }
+    margin-left: auto;
   }
 `
 export default TextBackground_bones;

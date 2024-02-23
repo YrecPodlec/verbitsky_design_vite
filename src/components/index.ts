@@ -9,6 +9,15 @@ import {
     ModalDescriptionProject_bones,
     ModalGallery_bones, ModalImagesGalleryList_bones
 } from "src/components/ModalWindowGallery/ModalWindow.ts";
+import {
+    BigDesktopQuery_bones,
+    DesktopQuery_bones, MobileQuery_bones,
+    TabletQuery_bones
+} from "src/components/MediaQueries/media-width-main.ts";
+export {BigDesktopQuery_bones as BigDesktopQuery}
+export {DesktopQuery_bones as DesktopQuery}
+export {TabletQuery_bones as TabletQuery}
+export {MobileQuery_bones as MobileQuery}
 
 export {NavBar_bones as NavBar}
 export {ButtonNavBar_bones as ButtonNavBar}
