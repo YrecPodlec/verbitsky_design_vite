@@ -6,6 +6,28 @@ export const propsList = {
     pinkLight: '#FF9B8D',
     DarkGreen: '#005157',
     pixel4: '4px',
+
+    // TEXT OF PRICES:
+    FirstCard: {
+        first: `
+        <ul>
+            <li>То-то</li>
+            <li>То-то</li>
+            <li>Ещё То-то</li>
+        </ul>
+        `,
+        second: `
+        <ul>
+            <li>кое что</li>
+            <li>третье</li>
+            <li>пятое</li>
+            <li>десятое</li>
+        </ul>
+        `
+    },
+
+
+
     MediaQuery: {
         sizesBigDesktop: [
             '3840px',

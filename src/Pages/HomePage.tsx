@@ -2,7 +2,7 @@ import React from 'react';
 import {Div50, SectionBlock} from "src/styles";
 import styled from "styled-components";
 import {propsList} from "src/styles/consts.ts";
-import {BottonRowDown, MobileQuery, TextBackground} from "src/components";
+import {BottonRowDown, CardOfPrice, MobileQuery, TextBackground} from "src/components";
 
 const BlockLeftHomeMain = styled.div`
   //background-color: rgba(255, 79, 79, 0.35);
@@ -77,7 +77,7 @@ const BlackBackground = styled.div`
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-rows: 10% auto 10%;
+  grid-template-rows: 10% auto 15%;
 `
 const BlockCenter = styled.div`
   display: flex;
@@ -179,9 +179,10 @@ const HomePage_bones: React.FC = () => {
             {/*    </BlockWaveText>*/}
             {/*</BackWave>*/}
 
-            <div style={{height:"100vh"}}>
-                sdasd
-            </div>
+            <SectionBlock>
+                <CardOfPrice UrlAddressImage={'/images/los-angeles/1-la.webp'}
+                             PositionPhoto={'bottom'} Title={'PREMIUM'}/>
+            </SectionBlock>
 
         </main>
     );

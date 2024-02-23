@@ -15,7 +15,7 @@ const BottonRowDown_bones:React.FC = () => {
         justify-content: center;
         flex-direction: column;
         img{
-          max-height: 60px;
+          height: 50px;
         }
       }
     `

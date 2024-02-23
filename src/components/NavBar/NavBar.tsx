@@ -84,8 +84,7 @@ const NavBar_bones: React.FC = () => {
         align-items: flex-start;
         padding: 16px;
         margin: 0;
-        position: relative;
-        left: ${marginLeftPos.left};
+        transform: translateX(${marginLeftPos.left});
       `)}
       ${MobileQuery(`
         background-color: ${propsList.background};
@@ -93,8 +92,7 @@ const NavBar_bones: React.FC = () => {
         justify-content: left;
         align-items: flex-start;
         padding: 16px;
-        position: relative;
-        left: ${marginLeftPos.left};
+        transform: translateX(${marginLeftPos.left});
       `)}
     `
     return (

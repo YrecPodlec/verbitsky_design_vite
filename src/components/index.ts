@@ -14,6 +14,7 @@ import {
     DesktopQuery_bones, MobileQuery_bones,
     TabletQuery_bones
 } from "src/components/MediaQueries/media-width-main.ts";
+import CardOfPrice_bones from "src/components/CardOfPrice/CardOfPrice.tsx";
 export {BigDesktopQuery_bones as BigDesktopQuery}
 export {DesktopQuery_bones as DesktopQuery}
 export {TabletQuery_bones as TabletQuery}
@@ -35,3 +36,5 @@ export {BigModalFirstBlock_bones as BigModalFirstBlock}
 export {DivImageGallery_bones as DivImageGallery}
 
 export {ImageModalWindow_bones as ImageModalWindow}
+
+export {CardOfPrice_bones as CardOfPrice}
