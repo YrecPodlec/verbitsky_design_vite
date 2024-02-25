@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import {propsList} from "src/styles/consts.ts";
+import {BigDesktopQuery, DesktopQuery} from "src/components";
 
 export const Gallery_blocks_bones = styled.div`
-  width: ${propsList['width1410']};
   margin: 0 auto;
   display: flex;
   & > div{
@@ -12,6 +11,8 @@ export const Gallery_blocks_bones = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
   }
+  ${BigDesktopQuery(``)}
+  ${DesktopQuery(``)}
 `
 
 export const Gallery_item_bones = styled.div<{bg: string}>`
