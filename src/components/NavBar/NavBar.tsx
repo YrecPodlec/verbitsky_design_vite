@@ -116,7 +116,7 @@ const NavBar_bones: React.FC = () => {
                     </div>
                 </div>
                 <ButtonBlocks>
-                    <ButtonNavBar href='/show-room' name='ШОУ РУМ' hrefBlock=''/>
+                    <ButtonNavBar href='/show-room' name='ШОУ РУМ'/>
                     {/*<ButtonNavBar href='/' name='УСЛУГИ' hrefBlock='#price'/>*/}
                     {/*<ButtonNavBar href='/suppliers' name='ПОСТАВЩИКИ' hrefBlock=''/>*/}
                     {/*<ButtonNavBar href='/articles' name='СТАТЬИ' hrefBlock=''/>*/}
