@@ -2,24 +2,28 @@ import styled from "styled-components";
 import {propsList} from "src/styles/consts.ts";
 import React from "react";
 interface CardOfPrice {
-    UrlAddressImage: string,
-    PositionPhoto: string,
-    Title: string,
+    CardData: {
+        title: string,
+        first: string,
+        second: string,
+        UrlAddressImage: string,
+        PositionPhoto: string
+    },
 }
-const CardOfPrice_bones: React.FC<CardOfPrice> = ({UrlAddressImage, PositionPhoto, Title}) => {
+const CardOfPrice_bones: React.FC<CardOfPrice> = ({CardData}) => {
     const ImageCard = styled.div`
       height: 192px;
       width: 100%;
-      background-image: url(${UrlAddressImage});
+      background-image: url(${CardData.UrlAddressImage});
       background-size: cover;
-      background-position: ${PositionPhoto};
+      background-position: ${CardData.PositionPhoto};
     `
     const CardOfPrice = styled.div`
       width: 350px;
       background-color: rgb(42, 43, 49);
       border: 4px solid ${propsList.pinkLight};
       &:hover{
-        transform: translateX(64px) translateY(-32px);
+        transform: translateX(16px) translateY(-64px);
       }
       ul {
         margin-left: 32px;
@@ -43,7 +47,7 @@ const CardOfPrice_bones: React.FC<CardOfPrice> = ({UrlAddressImage, PositionPhot
     return (
         <CardOfPrice>
             <ImageCard/>
-            <h1>{Title}</h1>
+            <h1>{CardData.title}</h1>
             <div>
                 <div>
                     <h2>Включают в себя:</h2>

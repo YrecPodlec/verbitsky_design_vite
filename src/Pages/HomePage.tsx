@@ -1,8 +1,8 @@
 import React from 'react';
-import {Div50, SectionBlock} from "src/styles";
+import {Div50, SectionAboutMe, SectionBlock, SectionPrice, SectionUnique} from "src/styles";
 import styled from "styled-components";
 import {propsList} from "src/styles/consts.ts";
-import {BottonRowDown, CardOfPrice, MobileQuery, TextBackground} from "src/components";
+import {BottonRowDown, MobileQuery, TextBackground} from "src/components";
 
 const BlockLeftHomeMain = styled.div`
   //background-color: rgba(255, 79, 79, 0.35);
@@ -85,6 +85,7 @@ const BlockCenter = styled.div`
   align-items: center;
 `
 
+
 // OLD VARIANT
 
 // const BackWave = styled.section`
@@ -139,7 +140,7 @@ const HomePage_bones: React.FC = () => {
                     </BlockImageBackground>
                 </Div50>
                 <div style={{margin: "0 auto"}}>
-                    <BlockLeftHomeMain>
+                    <BlockLeftHomeMain >
                         <div>
                             <img src="/verbitsky%20irina.webp" alt=""/>
                         </div>
@@ -179,10 +180,14 @@ const HomePage_bones: React.FC = () => {
             {/*    </BlockWaveText>*/}
             {/*</BackWave>*/}
 
-            <SectionBlock>
-                <CardOfPrice UrlAddressImage={'/images/los-angeles/1-la.webp'}
-                             PositionPhoto={'bottom'} Title={'PREMIUM'}/>
-            </SectionBlock>
+            {/*ABOUT ME*/}
+            <SectionAboutMe />
+
+            {/*УНИКАЛЬНОСТЬ*/}
+            <SectionUnique />
+
+            {/*УСЛУГИ*/}
+            <SectionPrice />
 
         </main>
     );

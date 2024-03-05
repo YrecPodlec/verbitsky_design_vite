@@ -6,9 +6,11 @@ export const propsList = {
     pinkLight: '#FF9B8D',
     DarkGreen: '#005157',
     pixel4: '4px',
-
     // TEXT OF PRICES:
     FirstCard: {
+        PositionPhoto: 'bottom',
+        UrlAddressImage: '/images/los-angeles/1-la.webp',
+        title: 'PREMIUM',
         first: `
         <ul>
             <li>То-то</li>
@@ -25,9 +27,6 @@ export const propsList = {
         </ul>
         `
     },
-
-
-
     MediaQuery: {
         sizesBigDesktop: [
             '3840px',
@@ -66,4 +65,15 @@ export const propsList = {
             '100px',
         ],
     },
+    AboutMeText: {
+        TextNumber1: 'saasdasasd asdasdasdasda sdasda sda sdas da ' +
+            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
+            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
+            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
+            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
+            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
+            'saasdasasd asdasdasdasda sdasda sda sdas da ',
+        TextNumber2: 'dfgfdgfdgdfgfdgdfgdfgdfgfdgdfgdfgdfgdg',
+        TextNumber3: 'hjkjhkjhkhjkhjkhjkhjkhjkhjkjhkhjkhjkjh'
+    }
 }

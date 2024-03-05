@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {BigDesktopQuery, DesktopQuery} from "src/components";
 
 export const Gallery_blocks_bones = styled.div`
   margin: 0 auto;
@@ -11,8 +10,6 @@ export const Gallery_blocks_bones = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  ${BigDesktopQuery(``)}
-  ${DesktopQuery(``)}
 `
 
 export const Gallery_item_bones = styled.div<{bg: string}>`

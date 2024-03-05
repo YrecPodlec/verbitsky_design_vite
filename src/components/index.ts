@@ -15,6 +15,9 @@ import {
     TabletQuery_bones
 } from "src/components/MediaQueries/media-width-main.ts";
 import CardOfPrice_bones from "src/components/CardOfPrice/CardOfPrice.tsx";
+import TitleBig_bones from "src/components/buttons/ButtonLinkAndTitle/ButtonLinkAndTitle.tsx";
+import ButtonAboutMe_bones from "src/components/buttons/ButtonAboutMe/ButtonAboutMe.tsx";
+import ButtonOnPages_bones from "src/components/buttons/ButtonOnPages/ButtonOnPages.tsx";
 export {BigDesktopQuery_bones as BigDesktopQuery}
 export {DesktopQuery_bones as DesktopQuery}
 export {TabletQuery_bones as TabletQuery}
@@ -38,3 +41,8 @@ export {DivImageGallery_bones as DivImageGallery}
 export {ImageModalWindow_bones as ImageModalWindow}
 
 export {CardOfPrice_bones as CardOfPrice}
+
+export {TitleBig_bones as TitleBig}
+export {ButtonAboutMe_bones as ButtonAboutMe}
+
+export {ButtonOnPages_bones as ButtonOnPages}

@@ -40,10 +40,15 @@ const NavBar_bones: React.FC = () => {
       div{
         display: flex;
         justify-content: space-between;
-        .header_logo, a, img{
+        .header_logo, a{
           height: 50px;
           width: 150px;
           background-size: cover;
+          img{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+          }
         }
         div:nth-child(2){
           font-size: 42px;
@@ -99,10 +104,10 @@ const NavBar_bones: React.FC = () => {
         <HeaderNavBar>
             <NavNavBar>
                 <div>
-                    <div className={'header_logo'}>
+                    <div>
                         <Link to='/'>
                             <a href="#main">
-                                <img src="/logo_header.webp" alt=""/>
+                                <img src="/Logo_white.webp" alt=""/>
                             </a>
                         </Link>
                     </div>

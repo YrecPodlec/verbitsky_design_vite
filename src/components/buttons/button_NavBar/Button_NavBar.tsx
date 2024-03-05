@@ -4,10 +4,9 @@ import {propsList} from "src/styles/consts.ts";
 import {Link} from "react-router-dom";
 interface ButtonNavBar{
     href: string,
-    name: string,
-    hrefBlock: string
+    name: string
 }
-const ButtonNavBar_bones: React.FC<ButtonNavBar> = ({href, name, hrefBlock}) => {
+const ButtonNavBar_bones: React.FC<ButtonNavBar> = ({href, name}) => {
     const ButtonNavBar = styled.button`
       border-radius: 24px;
       overflow: hidden;
@@ -31,7 +30,7 @@ const ButtonNavBar_bones: React.FC<ButtonNavBar> = ({href, name, hrefBlock}) => 
     return (
         <ButtonNavBar>
             <Link to={href}>
-                <a href={hrefBlock}>
+                <a>
                     {name}
                 </a>
             </Link>
