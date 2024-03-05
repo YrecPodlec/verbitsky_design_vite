@@ -117,11 +117,6 @@ const NavBar_bones: React.FC = () => {
                 </div>
                 <ButtonBlocks>
                     <ButtonNavBar href='/show-room' name='ШОУ РУМ'/>
-                    {/*<ButtonNavBar href='/' name='УСЛУГИ' hrefBlock='#price'/>*/}
-                    {/*<ButtonNavBar href='/suppliers' name='ПОСТАВЩИКИ' hrefBlock=''/>*/}
-                    {/*<ButtonNavBar href='/articles' name='СТАТЬИ' hrefBlock=''/>*/}
-                    {/*<ButtonNavBar href='/' name='ОБО МНЕ' hrefBlock='#about-me'/>*/}
-                    {/*<ButtonNavBar href='/contacts' name='КОНТАКТЫ' hrefBlock=''/>*/}
                 </ButtonBlocks>
             </NavNavBar>
         </HeaderNavBar>
