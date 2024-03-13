@@ -31,6 +31,11 @@ const SectionAboutMe_bones = () => {
   background-size: cover;
   background-position: center;
     width: 50%;
+    ${MobileQuery(`
+    width: 100%;
+    height: 35vh;
+    background-position: bottom;
+  `)}
 `
   const AboutMeList = styled.div`
     display: flex;
@@ -40,6 +45,10 @@ const SectionAboutMe_bones = () => {
     justify-content: space-between;
     margin-right: 32px;
     gap: 64px;
+    ${MobileQuery(`
+    width: 95%;
+    margin: 16px auto;
+  `)}
     .list_buttons{
       display: flex;
       flex-direction: column;
@@ -59,9 +68,13 @@ const SectionAboutMe_bones = () => {
           <AboutMeList>
             <TitleBig text={'ОБО МНЕ'}/>
             <div className={'list_buttons'}>
-                <ButtonAboutMe AboutMeData={propsList.AboutMeText[TextNumber1]} question={'qqqqqqqqqqqqq'} />
-                <ButtonAboutMe AboutMeData={propsList.AboutMeText[TextNumber2]} question={'s'} />
-                <ButtonAboutMe AboutMeData={propsList.AboutMeText[TextNumber3]} question={'a'} />
+                <ButtonAboutMe AboutMeData={propsList.AboutMeText[TextNumber1]} question={'Имею степень магистра, факультета Архитектуры и дизайна'} />
+                <ButtonAboutMe AboutMeData={propsList.AboutMeText[TextNumber2]} question={'Большой опыт работы и множество проектов в разных стилях'} />
+                <div className={'articles_button'}>
+                    <h3>Больше проектов в Шоу Руме:</h3>
+                    <ButtonOnPages href='/show-room' name={'ШОУ РУМ'}/>
+                </div>
+                <ButtonAboutMe AboutMeData={propsList.AboutMeText[TextNumber3]} question={'Большая база поставщиков, комплектация по доступным ценам'} />
             </div>
               <div className={'articles_button'}>
                   <h3>Подробнее в моих статьях:</h3>

@@ -10,8 +10,8 @@ const ButtonAboutMe_bones: React.FC<ButtonAboutMe> = ({question, AboutMeData}) =
             <h1>
                 {question}
             </h1>
-            <div>
-                {AboutMeData}
+            <div className={styles.answer_block}>
+                <div>{AboutMeData}</div>
             </div>
         </div>
     );

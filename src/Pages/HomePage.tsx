@@ -133,7 +133,7 @@ const HomePage_bones: React.FC = () => {
                             <BlockCenter>
                                 <div>ТУТ БУДЕТ ТЕКСТ</div>
                             </BlockCenter>
-                            <div id={'ScrollBlock'}>
+                            <div>
                                 <BottonRowDown/>
                             </div>
                         </BlackBackground>
@@ -151,6 +151,7 @@ const HomePage_bones: React.FC = () => {
                     </BlockLeftHomeMain>
                 </div>
             </SectionBlock>
+            < div id={'ScrollBlock'}/>
 
             {/*OLD VARIANT*/}
 
@@ -188,6 +189,7 @@ const HomePage_bones: React.FC = () => {
 
             {/*УСЛУГИ*/}
             <SectionPrice />
+
 
         </main>
     );

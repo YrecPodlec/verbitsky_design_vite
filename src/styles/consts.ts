@@ -69,9 +69,6 @@ export const propsList = {
         TextNumber1: 'saasdasasd asdasdasdasda sdasda sda sdas da ' +
             'saasdasasd asdasdasdasda sdasda sda sdas da ' +
             'saasdasasd asdasdasdasda sdasda sda sdas da ' +
-            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
-            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
-            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
             'saasdasasd asdasdasdasda sdasda sda sdas da ',
         TextNumber2: 'dfgfdgfdgdfgfdgdfgdfgdfgfdgdfgdfgdfgdg',
         TextNumber3: 'hjkjhkjhkhjkhjkhjkhjkhjkhjkjhkhjkhjkjh'
