@@ -1,5 +1,5 @@
 import React from 'react';
-import {Div50, SectionAboutMe, SectionBlock, SectionGalleryHome, SectionPrice, SectionUnique} from "src/styles";
+import {Div50, SectionAboutMe, SectionBlock, SectionUnique} from "src/styles";
 import styled from "styled-components";
 import {propsList} from "src/styles/consts.ts";
 import {BottonRowDown, Footer, MobileQuery, TextBackground} from "src/components";
