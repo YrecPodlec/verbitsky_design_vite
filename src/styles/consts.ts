@@ -67,12 +67,10 @@ export const propsList = {
         ],
     },
     AboutMeText: {
-        TextNumber1: 'saasdasasd asdasdasdasda sdasda sda sdas da ' +
-            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
-            'saasdasasd asdasdasdasda sdasda sda sdas da ' +
-            'saasdasasd asdasdasdasda sdasda sda sdas da ',
-        TextNumber2: 'dfgfdgfdgdfgfdgdfgdfgdfgfdgdfgdfgdfgdg',
-        TextNumber3: 'hjkjhkjhkhjkhjkhjkhjkhjkhjkjhkhjkhjkjh'
+        TextNumber1: 'Закончила Магистратуру в ИРНИТУ, направление "Архитектура-Дизайн"',
+        TextNumber2: 'Из большого опыта работы, имеется большое портфолио с реализованными проектами,' +
+            'в разных стилях, основываясь на предпочтениях заказчика, так и на профессиональном и грамотном видении стиля',
+        TextNumber3: 'Могу сэкономить бюджет заказчика, используя в интерьере материалы/технику/мебель по оптовым, доступным ценам'
     },
     CarouselGalleryHome: {
         images: [
