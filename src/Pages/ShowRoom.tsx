@@ -39,16 +39,6 @@ const ImageBlockGallery = styled.div`
   &:nth-child(2){
     left: 4vw;
   }
-  &::after {
-    content: '';
-    position: relative;
-    border: 1px solid white;
-    display: block;
-    border-radius: 150px 150px 0 0;
-    height: 100%;
-    top: -105%;
-    left: 5%;
-  }
 `
 const ImagesRow = styled.div`
   display: flex;
@@ -94,7 +84,6 @@ const Pagination_parent = styled.div`
     
   }
 `
-
 const ShowRoom_bones: React.FC = () => {
     const [page, setPage] = useState(1)
     // GET DATA
@@ -105,7 +94,6 @@ const ShowRoom_bones: React.FC = () => {
             select: ({data}) => data,
         }
     )
-
     const [selectedItem, setSelectedItem] = useState<any>({});
     const handleItemClick = (data: any) => {
         setSelectedItem(data);
@@ -127,7 +115,6 @@ const ShowRoom_bones: React.FC = () => {
     const handleCloseModal_image = () => {
         setDisplayModal_image('none')
     }
-    console.log(data)
     return (
         <main>
             <SectionBlock>

@@ -1,21 +1,30 @@
-export const DataBaseGallery = {
-    background: 'rgba(30,31,34)',
-    backgroundModal: 'rgb(9,9,10)',
-    orange: '#E50000',
-    orangeLight: 'rgba(229,0,0,0.4)',
-    pinkLight: '#FF9B8D',
-    DarkGreen: '#005157',
-    pixel4: '4px',
-    sizes: [
-        '3840px',
-        '2560px',
-        '2048px',
-        '1920px',
-        '1600px',
-        '1400px',
-        '1280px'
-    ]
-}
-for (let i; i <= 10; i++){
-    console.log(i)
-}
+const addUniqueObjects = (data) => {
+    const uniqueTypes = {};
+    const result = [];
+
+    data.forEach(item => {
+        if (!uniqueTypes[item.Type]) {
+            uniqueTypes[item.Type] = true;
+            result.push(item);
+        }
+    });
+
+    return result;
+};
+
+const DataBase = [
+    { id: 1, Type: 'Type1' },
+    { id: 2, Type: 'Type1' },
+    { id: 3, Type: 'Type1' },
+    { id: 4, Type: 'Type2' },
+    { id: 5, Type: 'Type2' },
+    { id: 6, Type: 'Type3' },
+    { id: 7, Type: 'Type3' },
+    { id: 8, Type: 'Type4' },
+    { id: 9, Type: 'Type4' },
+    { id: 10, Type: 'Type4' },
+    { id: 11, Type: 'Type3' },
+];
+
+const uniqueObjects = addUniqueObjects(DataBase);
+console.log(uniqueObjects);

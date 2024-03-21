@@ -4,7 +4,8 @@ export const Gallery_blocks_bones = styled.div`
   margin: 0 auto;
   display: flex;
   & > div{
-    width: 100%;
+    margin: 0 auto;
+    width: 90%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -14,7 +15,7 @@ export const Gallery_blocks_bones = styled.div`
 
 export const Gallery_item_bones = styled.div<{bg: string}>`
   width: 28%;
-  height: 250px;
+  height: 300px;
   margin: 24px auto;
   background-image: url(${props => props.bg});
   background-size: cover;

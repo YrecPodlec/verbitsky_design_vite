@@ -74,7 +74,7 @@ const SectionUnique_bones = () => {
             `
         }
     ]
-    const SectionUnique = styled.div`
+    const SectionUnique = styled.section`
       display: flex;
       align-items: flex-end;
       margin: 0 auto;

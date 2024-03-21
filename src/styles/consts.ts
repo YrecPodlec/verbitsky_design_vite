@@ -1,5 +1,6 @@
 export const propsList = {
     background: 'rgba(30,31,34)',
+    backgroundDarker: 'rgb(21,21,23)',
     backgroundModal: 'rgb(9,9,10)',
     orange: '#E50000',
     orangeLight: 'rgba(229,0,0,0.4)',
@@ -72,5 +73,19 @@ export const propsList = {
             'saasdasasd asdasdasdasda sdasda sda sdas da ',
         TextNumber2: 'dfgfdgfdgdfgfdgdfgdfgdfgfdgdfgdfgdfgdg',
         TextNumber3: 'hjkjhkjhkhjkhjkhjkhjkhjkhjkjhkhjkhjkjh'
+    },
+    CarouselGalleryHome: {
+        images: [
+            './images/winter_summer/3.jpg',
+            './images/moodboards/1-moodboards.webp',
+            './images/winter_summer/1.jpg',
+            './images/river-park/1-river.webp',
+        ],
+        text: [
+            'text1',
+            'text2',
+            'text3',
+            'text4'
+        ]
     }
 }

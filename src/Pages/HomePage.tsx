@@ -1,8 +1,8 @@
 import React from 'react';
-import {Div50, SectionAboutMe, SectionBlock, SectionPrice, SectionUnique} from "src/styles";
+import {Div50, SectionAboutMe, SectionBlock, SectionGalleryHome, SectionPrice, SectionUnique} from "src/styles";
 import styled from "styled-components";
 import {propsList} from "src/styles/consts.ts";
-import {BottonRowDown, MobileQuery, TextBackground} from "src/components";
+import {BottonRowDown, Footer, MobileQuery, TextBackground} from "src/components";
 
 const BlockLeftHomeMain = styled.div`
   //background-color: rgba(255, 79, 79, 0.35);
@@ -187,9 +187,14 @@ const HomePage_bones: React.FC = () => {
             {/*УНИКАЛЬНОСТЬ*/}
             <SectionUnique />
 
+            {/*ГАЛЕРЕЯ*/}
+            <SectionGalleryHome />
+
             {/*УСЛУГИ*/}
             <SectionPrice />
 
+            {/*Footer*/}
+            <Footer />
 
         </main>
     );

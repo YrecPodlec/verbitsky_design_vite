@@ -18,6 +18,7 @@ import CardOfPrice_bones from "src/components/CardOfPrice/CardOfPrice.tsx";
 import TitleBig_bones from "src/components/buttons/ButtonLinkAndTitle/ButtonLinkAndTitle.tsx";
 import ButtonAboutMe_bones from "src/components/buttons/ButtonAboutMe/ButtonAboutMe.tsx";
 import ButtonOnPages_bones from "src/components/buttons/ButtonOnPages/ButtonOnPages.tsx";
+import Footer_bones from "src/components/Footer/Footer.tsx";
 export {BigDesktopQuery_bones as BigDesktopQuery}
 export {DesktopQuery_bones as DesktopQuery}
 export {TabletQuery_bones as TabletQuery}
@@ -46,3 +47,4 @@ export {TitleBig_bones as TitleBig}
 export {ButtonAboutMe_bones as ButtonAboutMe}
 
 export {ButtonOnPages_bones as ButtonOnPages}
+export {Footer_bones as Footer}

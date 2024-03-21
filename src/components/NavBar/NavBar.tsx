@@ -117,6 +117,7 @@ const NavBar_bones: React.FC = () => {
                 </div>
                 <ButtonBlocks>
                     <ButtonNavBar href='/show-room' name='ШОУ РУМ'/>
+                    <ButtonNavBar href='/articles' name='СТАТЬИ'/>
                 </ButtonBlocks>
             </NavNavBar>
         </HeaderNavBar>
