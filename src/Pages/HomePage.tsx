@@ -188,10 +188,10 @@ const HomePage_bones: React.FC = () => {
             <SectionUnique />
 
             {/*ГАЛЕРЕЯ*/}
-            <SectionGalleryHome />
+            {/*<SectionGalleryHome />*/}
 
             {/*УСЛУГИ*/}
-            <SectionPrice />
+            {/*<SectionPrice />*/}
 
             {/*Footer*/}
             <Footer />

@@ -86,7 +86,7 @@ const Articles_bones = () => {
                 </div>
                 <div className={'Div50_article'}>
                     <p>
-                        Невероятный текст
+                        Будут добавленны статьи
                     </p>
                 </div>
             </SectionBlock>
