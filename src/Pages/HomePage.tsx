@@ -129,9 +129,9 @@ const HomePage_bones: React.FC = () => {
                 <Div50>
                     <BlockImageBackground>
                         <BlackBackground>
-                            <div>тут будет инфа</div>
+                            <div>г. Москва | Также работаю дистанционно, в том числе и за рубежом</div>
                             <BlockCenter>
-                                <div>ТУТ БУДЕТ ТЕКСТ</div>
+                                <div> </div>
                             </BlockCenter>
                             <div>
                                 <BottonRowDown/>
