@@ -1,8 +1,8 @@
 import React from 'react';
-import {Div50, SectionAboutMe, SectionBlock, SectionUnique} from "src/styles";
+import {Div50, SectionAboutMe, SectionBlock, SectionGalleryHome, SectionUnique} from "src/styles";
 import styled from "styled-components";
 import {propsList} from "src/styles/consts.ts";
-import {BottonRowDown, Footer, MobileQuery, TextBackground} from "src/components";
+import {BottonRowDown, MobileQuery, TextBackground} from "src/components";
 
 const BlockLeftHomeMain = styled.div`
   //background-color: rgba(255, 79, 79, 0.35);
@@ -78,6 +78,15 @@ const BlackBackground = styled.div`
   height: 100%;
   display: grid;
   grid-template-rows: 10% auto 15%;
+  div{
+    padding: 16px;
+  }
+  .CenterText{
+    text-align: center;
+  }
+  a{
+    color: white;
+  }
 `
 const BlockCenter = styled.div`
   display: flex;
@@ -129,9 +138,24 @@ const HomePage_bones: React.FC = () => {
                 <Div50>
                     <BlockImageBackground>
                         <BlackBackground>
-                            <div>г. Москва | Также работаю дистанционно, в том числе и за рубежом</div>
+                            <div>
+                                <p>
+                                    г. Москва | Также работаю дистанционно, в том числе и за рубежом
+                                </p>
+                                <div>+7-950-06-12-752 | <a href="https://t.me/IrinaV752">t.me/IrinaV752</a> | @verbitskaya5272 | verbitsky.vastu@gmail.com</div>
+                            </div>
+
                             <BlockCenter>
-                                <div> </div>
+                                <div className={'CenterText'}>
+                                    Мой дизайн – это прежде всего формирование оздоровительной среды, которая помогает
+                                    поддерживать физическое и психологическое здоровье человека.
+                                    <br/>
+                                    <br/>
+                                    Вы получаете
+                                    не только стильное помещение, отвечающее всем критериям моды и стиля,
+                                    но и пространство, которое работает на социальные и психологические потребности
+                                    его обитателей.
+                                </div>
                             </BlockCenter>
                             <div>
                                 <BottonRowDown/>
@@ -188,13 +212,10 @@ const HomePage_bones: React.FC = () => {
             <SectionUnique />
 
             {/*ГАЛЕРЕЯ*/}
-            {/*<SectionGalleryHome />*/}
+            <SectionGalleryHome />
 
             {/*УСЛУГИ*/}
             {/*<SectionPrice />*/}
-
-            {/*Footer*/}
-            <Footer />
 
         </main>
     );

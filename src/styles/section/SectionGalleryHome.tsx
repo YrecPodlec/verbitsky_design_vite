@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BigDesktopQuery, DesktopQuery, TabletQuery, TitleBig } from "src/components";
+import {BigDesktopQuery, ButtonOnPages, DesktopQuery, TabletQuery, TitleBig} from "src/components";
 import { propsList } from "src/styles/consts.ts";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -22,7 +22,22 @@ const SectionGalleryHome_bones = () => {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-
+        
+        .GalleryTextCenter{
+          display: flex;
+          align-items: center;
+          height: 100%;
+          div{
+            p:nth-child(1){
+              font-size: 24px;
+            }
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 64px;
+          }
+        }
+        
         .ButtonsLine {
           position: absolute;
           display: flex;
@@ -70,6 +85,7 @@ const SectionGalleryHome_bones = () => {
                 display: flex;
                 background-color: rgba(0, 0, 0, 0.4);
                 position: absolute;
+                text-align: center;
                 width: 100%;
                 height: 100%;
               }
@@ -89,6 +105,21 @@ const SectionGalleryHome_bones = () => {
         <SectionGallery>
             <div className="mainBlocks2">
                 <TitleBig text={'ГАЛЕРЕЯ'} />
+                <div className={'GalleryTextCenter'}>
+                    <div>
+                        <p>
+                            Вы можете ознакомится с галереей проектов, где для вас представлены подробные Чертежи, Коллажи и Визуализации
+                            <br/>
+                            <br/>
+                            Вы можете посмотреть мои работы в галерее. Мой послужной список достаточно обширный,
+                            за весь период работы проектировала дизайн интерьера в разных городах и странах
+                            <br/>
+                            <br/>
+                            Перейдя на вкладку "Шоу Рум", вы можете детально ознакомится с проектами
+                        </p>
+                        <ButtonOnPages href='/show-room' name={'ШОУ РУМ'}/>
+                    </div>
+                </div>
             </div>
             <div className="mainBlocks2">
                 <motion.div className={'ButtonsLine'}>

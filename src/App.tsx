@@ -1,7 +1,7 @@
 import './App.css'
 import {Route, Routes} from "react-router-dom";
 import {Articles, HomePage, ShowRoom, StrangerPage} from "src/Pages";
-import {NavBar} from "src/components";
+import {Footer, NavBar} from "src/components";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
               <Route path="/articles" element={<Articles/>}/>
               <Route path="/test" element={<StrangerPage/>}/>
           </Routes>
+          <Footer />
       </>
   )
 }

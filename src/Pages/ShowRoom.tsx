@@ -179,22 +179,22 @@ const ShowRoom_bones: React.FC = () => {
                         {selectedItem.title}
                     </h1>
                     <ModalDescriptionProject>
-                        <div style={{width: "75%"}}>
+                        <div style={{width: "100%"}}>
                             <h1>Описание проекта:</h1>
                             <div>
                                 {selectedItem.description}
                             </div>
                         </div>
-                        <div style={{width: "25%"}}>
-                            <div style={{display: "flex", justifyContent: "space-between"}}>
-                                <h4>Квадратные метры:</h4>
-                                <div>{selectedItem.size}</div>
-                            </div>
-                            <div style={{display: "flex", justifyContent: "space-between"}}>
-                                <h4>Сроки и сдача:</h4>
-                                <div>{selectedItem.deadline}</div>
-                            </div>
-                        </div>
+                        {/*<div style={{width: "25%"}}>*/}
+                        {/*    <div style={{display: "flex", justifyContent: "space-between"}}>*/}
+                        {/*        <h4>Квадратные метры:</h4>*/}
+                        {/*        <div>{selectedItem.size}</div>*/}
+                        {/*    </div>*/}
+                        {/*    <div style={{display: "flex", justifyContent: "space-between"}}>*/}
+                        {/*        <h4>Сроки и сдача:</h4>*/}
+                        {/*        <div>{selectedItem.deadline}</div>*/}
+                        {/*    </div>*/}
+                        {/*</div>*/}
                     </ModalDescriptionProject>
                     <ModalImagesGalleryList>
                         {

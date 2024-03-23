@@ -30,6 +30,16 @@ const Footer_bones = () => {
         padding: 0;
         display: flex;
         justify-content: space-between;
+        .Contacts{
+          align-items: flex-start;
+          justify-content: flex-start;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          a{
+            color: white;
+          }
+        }
         div{
           padding: 0;
           text-align: center;
@@ -43,10 +53,14 @@ const Footer_bones = () => {
                     <img src="/Logo_white.webp" alt=""/>
                 </div>
                 <div className={'MediumBlock'}>
-                    <div>
+                    <div className={'Contacts'}>
                         <h1>КОНТАКТЫ:</h1>
+                        <p>+7-950-06-12-752</p>
+                        <a href="https://t.me/IrinaV752">t.me/IrinaV752</a>
+                        <p>@verbitskaya5272</p>
+                        <p>verbitsky.vastu@gmail.com</p>
                     </div>
-                    <div>
+                    <div className={'Contacts'}>
                         <h1>САЙТ РАЗРАБОТАН:</h1>
                         <p>
                             Vite + React
