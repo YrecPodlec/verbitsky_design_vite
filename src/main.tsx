@@ -5,7 +5,6 @@ import {BrowserRouter} from "react-router-dom";
 import {createGlobalStyle} from "styled-components";
 import './App.css'
 import {QueryClient, QueryClientProvider} from "react-query";
-
 const Global = createGlobalStyle`
   * {
     margin: 0;
